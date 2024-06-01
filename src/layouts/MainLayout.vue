@@ -12,8 +12,13 @@
         />
 
         
-        
+
       </q-toolbar>
+      <div class="q-px-lg q-pt-xl q-mb-md">
+      <div class="text-h3">My Bucket List</div>
+      <div class="text-subtitle">It's time to tackle it today!</div>
+      </div>
+      
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
