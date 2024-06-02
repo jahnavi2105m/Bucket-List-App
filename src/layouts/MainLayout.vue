@@ -15,7 +15,7 @@
         <div class="text-h3">My Bucket List</div>
         <div class="text-subtitle">ʕ´•ᴥ•`ʔ</div>
 
-        <div class="text-subtitle">Dream, Plan, Achieve!!</div>
+        <div class="text-subtitle">Dream, Plan, Achieve!</div>
       </div>
       <q-img
         src="https://cdn.pixabay.com/photo/2022/06/12/22/48/gradient-7258997_640.png"
@@ -23,7 +23,7 @@
       />
     </q-header>
 
-    <q-drawer v-model="drawer" show-if-above :width="200" :breakpoint="400">
+    <q-drawer v-model="drawer" show-if-above :width="180" :breakpoint="400">
       <q-scroll-area
         style="
           height: calc(100% - 150px);
@@ -34,41 +34,25 @@
         <q-list padding>
           <q-item clickable v-ripple>
             <q-item-section avatar>
-              <q-icon name="inbox" />
+              <q-icon name="list" />
             </q-item-section>
 
-            <q-item-section> Inbox </q-item-section>
-          </q-item>
-
-          <q-item active clickable v-ripple>
-            <q-item-section avatar>
-              <q-icon name="star" />
-            </q-item-section>
-
-            <q-item-section> Star </q-item-section>
+            <q-item-section> Bucket List </q-item-section>
           </q-item>
 
           <q-item clickable v-ripple>
             <q-item-section avatar>
-              <q-icon name="send" />
+              <q-icon name="help" />
             </q-item-section>
 
-            <q-item-section> Send </q-item-section>
-          </q-item>
-
-          <q-item clickable v-ripple>
-            <q-item-section avatar>
-              <q-icon name="drafts" />
-            </q-item-section>
-
-            <q-item-section> Drafts </q-item-section>
+            <q-item-section> Help </q-item-section>
           </q-item>
         </q-list>
       </q-scroll-area>
 
       <q-img
         class="absolute-top"
-        src="https://cdn.quasar.dev/img/material.png"
+        src="https://garden.spoonflower.com/c/8840943/p/f/m/1omdpeocYUHJ7sPWmnduN9dHxn_gEJZ4KbTjRjuntnjXKmtzgxA/solid%20green%20light%20green%20plain%20green.jpg"
         style="height: 150px"
       >
         <div class="absolute-bottom bg-transparent">
@@ -84,7 +68,9 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </q-page-container>
   </q-layout>
 </template>
