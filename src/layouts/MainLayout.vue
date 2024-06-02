@@ -17,18 +17,70 @@
 
         <div class="text-subtitle">Dream, Plan, Achieve!!</div>
       </div>
+      <q-img
+        src="https://cdn.pixabay.com/photo/2022/06/12/22/48/gradient-7258997_640.png"
+        class="header-image absolute-top"
+      />
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
-        <q-item-label header>Essential Links</q-item-label>
+    <q-drawer v-model="drawer" show-if-above :width="200" :breakpoint="400">
+      <q-scroll-area
+        style="
+          height: calc(100% - 150px);
+          margin-top: 150px;
+          border-right: 1px solid #ddd;
+        "
+      >
+        <q-list padding>
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="inbox" />
+            </q-item-section>
 
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
+            <q-item-section> Inbox </q-item-section>
+          </q-item>
+
+          <q-item active clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="star" />
+            </q-item-section>
+
+            <q-item-section> Star </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="send" />
+            </q-item-section>
+
+            <q-item-section> Send </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="drafts" />
+            </q-item-section>
+
+            <q-item-section> Drafts </q-item-section>
+          </q-item>
+        </q-list>
+      </q-scroll-area>
+
+      <q-img
+        class="absolute-top"
+        src="https://cdn.quasar.dev/img/material.png"
+        style="height: 150px"
+      >
+        <div class="absolute-bottom bg-transparent">
+          <q-avatar size="56px" class="q-mb-sm">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3940/3940448.png"
+            />
+          </q-avatar>
+          <div class="text-weight-bold">My Account</div>
+          <div></div>
+        </div>
+      </q-img>
     </q-drawer>
 
     <q-page-container>
@@ -89,9 +141,7 @@ const linksList = [
 export default defineComponent({
   name: 'MainLayout',
 
-  components: {
-    EssentialLink,
-  },
+  components: {},
 
   setup() {
     const leftDrawerOpen = ref(false);
@@ -106,3 +156,11 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss">
+.header-image {
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+}
+</style>
