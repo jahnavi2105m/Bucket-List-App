@@ -56,7 +56,16 @@ export default {
   },
   methods: {
     deleteTask(index) {
-      this.tasks.splice(index, 1);
+      this.$q
+        .dialog({
+          title: 'Confirm',
+          message: 'Are you sure you want to delete?',
+          cancel: true,
+          persistent: true,
+        })
+        .onOk(() => {
+          this.tasks.splice(index, 1);
+        });
     },
   },
 };
