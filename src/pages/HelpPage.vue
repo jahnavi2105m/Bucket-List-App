@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <h5>Bucket List</h5>
+    <h5>Help</h5>
   </q-page>
 </template>
 

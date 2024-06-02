@@ -32,7 +32,7 @@
         "
       >
         <q-list padding>
-          <q-item clickable v-ripple>
+          <q-item to="/" exact clickable v-ripple>
             <q-item-section avatar>
               <q-icon name="list" />
             </q-item-section>
@@ -40,7 +40,7 @@
             <q-item-section> Bucket List </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple>
+          <q-item to="/help" exact clickable v-ripple>
             <q-item-section avatar>
               <q-icon name="help" />
             </q-item-section>
