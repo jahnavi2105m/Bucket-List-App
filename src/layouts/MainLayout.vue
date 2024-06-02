@@ -23,7 +23,7 @@
       />
     </q-header>
 
-    <q-drawer v-model="drawer" show-if-above :width="180" :breakpoint="400">
+    <q-drawer v-model="drawer" show-if-above :width="180" :breakpoint="600">
       <q-scroll-area
         style="
           height: calc(100% - 150px);
