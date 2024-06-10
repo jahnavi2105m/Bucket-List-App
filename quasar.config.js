@@ -92,7 +92,7 @@ module.exports = configure(function (/* ctx */) {
 
       // For special cases outside of where the auto-import strategy can have an impact
       // (like functional components as one of the examples),
-      // you can manually specify Quasar components/directives to be available everywhere:
+      // you can manually specify Quasar components/ to be available everywhere:
       //
       // components: [],
       // directives: [],
@@ -171,6 +171,7 @@ module.exports = configure(function (/* ctx */) {
       bundler: 'packager', // 'packager' or 'builder'
 
       packager: {
+        //platform: 'win32',
         // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options
         // OS X / Mac App Store
         // appBundleId: '',
